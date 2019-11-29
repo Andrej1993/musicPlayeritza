@@ -9,14 +9,14 @@ var shuffle = false;
 var userLoggedIn;
 var timer;
 
-$(document).click(function(click) {
+$(document).on('click touchstart', function(click) {
 	var target = $(click.target);
 
 	if(!target.hasClass("item") && !target.hasClass("optionsButton")) {
 		hideOptionsMenu();
 	}
-});
-
+}
+	       
 $(window).scroll(function() {
 	hideOptionsMenu();
 });
